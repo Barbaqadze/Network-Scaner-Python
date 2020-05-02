@@ -17,7 +17,7 @@ def scan(ip):
 
 def get_arguments():
     parser = ArgumentParser()
-    parser.add_argument('-t' , '--target' , dest='target' , help='Target IP or IP range')
+    parser.add_argument('-t' , '--target', nargs='?' , dest='target' , help='Target IP or IP range' , required=True)
     options = parser.parse_args()
     return options
 
